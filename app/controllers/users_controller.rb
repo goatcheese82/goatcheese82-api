@@ -55,12 +55,12 @@ class UsersController < ApplicationController
 
     def user_params
         params.permit(
-            :username,
-            :password,
-            :name,
-            :password,
-            :email,
-            :uid
-        )
+        :name,
+        :username,
+        :uid,
+        :email,
+        :signed_id,
+        :password
+    )
     end
 end
