@@ -25,6 +25,8 @@ class UsersController < ApplicationController
     def create
         @user = User.create(user_params)
         if @user.save
+            @user.uid = @user.id
+            @user.save
             render json: @user
         else
             render json: {
